@@ -15,6 +15,8 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
+ * Main coursesearch class.
+ *
  * @package   block_coursesearch
  * @author    Mark Sharp <m.sharp@chi.ac.uk>
  * @copyright 2017 University of Chichester {@link www.chi.ac.uk}
@@ -23,20 +25,35 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+/**
+ * Main coursesearch class.
+ */
 class block_coursesearch extends block_base {
 
+    /**
+     * {@inheritdoc}
+     */
     function init() {
       $this->title = get_string('pluginname', 'block_coursesearch');
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function instance_allow_multiple() {
         return false;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     function instance_allow_config() {
         return true;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     function specialization() {
 
         // load userdefined title and make sure it's never empty
@@ -47,6 +64,9 @@ class block_coursesearch extends block_base {
         }
     }
 
+    /**
+     * {@inheritdoc}
+     */
     function get_content() {
         global $PAGE;
 
@@ -55,6 +75,9 @@ class block_coursesearch extends block_base {
         return $this->content;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function applicable_formats() {
         return array('my' => true, 'site' => true);
     }

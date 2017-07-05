@@ -15,13 +15,17 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
+ * Instance form configuration.
+ *
  * @package   block_coursesearch
  * @author    Mark Sharp <m.sharp@chi.ac.uk>
  * @copyright 2017 University of Chichester {@link www.chi.ac.uk}
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-
+/**
+ * Instance form configuration.
+ */
 class block_coursesearch_edit_form extends block_edit_form {
     protected function specific_definition($mform) {
         // Fields for editing HTML block title and contents.
