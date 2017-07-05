@@ -29,4 +29,4 @@ $plugin->version = 2017070500;
 $plugin->requires = 2016120500; // 3.2
 $plugin->release = 1.0;
 $plugin->maturity = MATURITY_STABLE;
-$plugin->component = block_coursesearch;
+$plugin->component = 'block_coursesearch';
