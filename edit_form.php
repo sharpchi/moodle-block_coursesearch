@@ -21,9 +21,15 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname'] = 'Basic course search';
-$string['coursesearch:myaddinstance'] = 'Add a basic course search block to Dashboard';
-$string['coursesearch:addinstance'] = 'Add a basic course search block';
-$string['blocktitle'] = 'Block title';
+class block_coursesearch_edit_form extends block_edit_form {
+    protected function specific_definition($mform) {
+        // Fields for editing HTML block title and contents.
+        $mform->addElement('header', 'configheader', get_string('blocksettings', 'block'));
+
+        $mform->addElement('text', 'config_title', get_string('blocktitle', 'block_coursesearch'));
+        $mform->setDefault('config_title', get_string('pluginname', 'block_coursesearch'));
+        $mform->setType('config_title', PARAM_TEXT);
+
+    }
+}

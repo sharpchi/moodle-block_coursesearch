@@ -33,6 +33,20 @@ class block_coursesearch extends block_base {
         return false;
     }
 
+    function instance_allow_config() {
+        return true;
+    }
+
+    function specialization() {
+
+        // load userdefined title and make sure it's never empty
+        if (empty($this->config->title)) {
+            $this->title = get_string('pluginname', 'block_coursesearch');
+        } else {
+            $this->title = $this->config->title;
+        }
+    }
+
     function get_content() {
         global $PAGE;
 
