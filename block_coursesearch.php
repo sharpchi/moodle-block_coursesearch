@@ -70,6 +70,14 @@ class block_coursesearch extends block_base {
     function get_content() {
         global $PAGE;
 
+        if($this->content !== NULL) {
+            return $this->content;
+        }
+
+        // Create empty content.
+        $this->content = new stdClass();
+        $this->content->text = '';
+        
         $courserenderer = $PAGE->get_renderer('core', 'course');
         $this->content->text = $courserenderer->course_search_form('', 'short');
         return $this->content;
