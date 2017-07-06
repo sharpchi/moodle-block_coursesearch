@@ -23,10 +23,19 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+defined('MOODLE_INTERNAL') || die();
+
 /**
  * Instance form configuration.
+ *
+ * @copyright 2017 University of Chichester {@link www.chi.ac.uk}
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class block_coursesearch_edit_form extends block_edit_form {
+
+    /**
+     * {@inheritdoc}
+     */
     protected function specific_definition($mform) {
         // Fields for editing HTML block title and contents.
         $mform->addElement('header', 'configheader', get_string('blocksettings', 'block'));

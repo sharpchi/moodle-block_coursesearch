@@ -27,14 +27,17 @@ defined('MOODLE_INTERNAL') || die();
 
 /**
  * Main coursesearch class.
+ *
+ * @copyright 2017 University of Chichester {@link www.chi.ac.uk}
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class block_coursesearch extends block_base {
 
     /**
      * {@inheritdoc}
      */
-    function init() {
-      $this->title = get_string('pluginname', 'block_coursesearch');
+    public function init() {
+        $this->title = get_string('pluginname', 'block_coursesearch');
     }
 
     /**
@@ -47,16 +50,16 @@ class block_coursesearch extends block_base {
     /**
      * {@inheritdoc}
      */
-    function instance_allow_config() {
+    public function instance_allow_config() {
         return true;
     }
 
     /**
      * {@inheritdoc}
      */
-    function specialization() {
+    public function specialization() {
 
-        // load userdefined title and make sure it's never empty
+        // Load userdefined title and make sure it's never empty.
         if (empty($this->config->title)) {
             $this->title = get_string('pluginname', 'block_coursesearch');
         } else {
@@ -67,7 +70,7 @@ class block_coursesearch extends block_base {
     /**
      * {@inheritdoc}
      */
-    function get_content() {
+    public function get_content() {
         global $PAGE;
 
         if($this->content !== NULL) {
@@ -77,7 +80,7 @@ class block_coursesearch extends block_base {
         // Create empty content.
         $this->content = new stdClass();
         $this->content->text = '';
-        
+
         $courserenderer = $PAGE->get_renderer('core', 'course');
         $this->content->text = $courserenderer->course_search_form('', 'short');
         return $this->content;
