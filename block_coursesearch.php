@@ -73,7 +73,7 @@ class block_coursesearch extends block_base {
     public function get_content() {
         global $PAGE;
 
-        if($this->content !== NULL) {
+        if ($this->content !== null) {
             return $this->content;
         }
 
