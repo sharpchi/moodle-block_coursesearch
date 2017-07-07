@@ -34,7 +34,9 @@ defined('MOODLE_INTERNAL') || die();
 class block_coursesearch_edit_form extends block_edit_form {
 
     /**
-     * {@inheritdoc}
+     * Definition for this form
+     *
+     * @param object $mform the form being built.
      */
     protected function specific_definition($mform) {
         // Fields for editing HTML block title and contents.
