@@ -29,3 +29,4 @@ $string['pluginname'] = 'Basic course search';
 $string['coursesearch:myaddinstance'] = 'Add a basic course search block to Dashboard';
 $string['coursesearch:addinstance'] = 'Add a basic course search block';
 $string['blocktitle'] = 'Block title';
+$string['privacy:metadata'] = 'The Course Search block only shows data stored in other locations.';
