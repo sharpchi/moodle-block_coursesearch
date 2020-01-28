@@ -2,28 +2,37 @@ language: php
 
 sudo: required
 
+# We currently disable Travis notifications entirely until https://github.com/travis-ci/travis-ci/issues/4976
+# is fixed.
+notifications:
+  email: false
+
 cache:
   directories:
     - $HOME/.composer/cache
     - $HOME/.npm
 
 php:
- - 7.2
- - 7.0
+ - 7.3
+ - 7.1.30
 
 addons:
     firefox: "47.0.1"
-    postgresql: "9.3"
+    postgresql: "9.6"
     packages:
         - oracle-java8-installer
         - oracle-java8-set-default
 
 env:
  global:
-    - MOODLE_BRANCH=MOODLE_34_STABLE
+    - MOODLE_BRANCH=MOODLE_38_STABLE
  matrix:
-  - DB=pgsql MOODLE_BRANCH=MOODLE_34_STABLE
-  - DB=mysqli MOODLE_BRANCH=MOODLE_34_STABLE
+  - DB=pgsql MOODLE_BRANCH=MOODLE_36_STABLE
+  - DB=pgsql MOODLE_BRANCH=MOODLE_37_STABLE
+  - DB=pgsql MOODLE_BRANCH=MOODLE_38_STABLE
+  - DB=mysqli MOODLE_BRANCH=MOODLE_36_STABLE
+  - DB=mysqli MOODLE_BRANCH=MOODLE_37_STABLE
+  - DB=mysqli MOODLE_BRANCH=MOODLE_38_STABLE
 
 before_install:
   - phpenv config-rm xdebug.ini
