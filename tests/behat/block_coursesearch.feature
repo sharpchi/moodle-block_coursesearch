@@ -26,7 +26,7 @@ Feature: Block course search
         And I click on "Customise this page" "button"
         And I add the "Basic course search" block
         When I set the field "Search courses" to "Biology"
-        And I click on "Go" "button" in the "Basic course search" "block"
+        And I click on "Search" "button" in the "Basic course search" "block"
         Then I should see "Biology Y1"
         And I should see "Biology Y2"
         And I should not see "English Y1"
@@ -40,7 +40,7 @@ Feature: Block course search
         And I add the "Basic course search" block
         And I am on site homepage
         When I set the field "Search courses" to "Biology"
-        And I click on "Go" "button" in the "Basic course search" "block"
+        And I click on "Search" "button" in the "Basic course search" "block"
         Then I should see "Biology Y1"
         And I should see "Biology Y2"
         And I should not see "English Y1"

@@ -80,7 +80,7 @@ class block_coursesearch extends block_base {
         $this->content->text = '';
 
         $courserenderer = $this->page->get_renderer('core', 'course');
-        $this->content->text = $courserenderer->course_search_form('', 'short');
+        $this->content->text = $courserenderer->course_search_form('');
         return $this->content;
     }
 
