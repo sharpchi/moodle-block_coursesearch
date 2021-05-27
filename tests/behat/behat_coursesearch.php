@@ -15,9 +15,11 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
+ * Behat steps for coursesearch
+ *
  * @package   block_coursesearch
  * @author    Mark Sharp <m.sharp@chi.ac.uk>
- * @copyright 2018 University of Chichester {@link www.chi.ac.uk}
+ * @copyright 2018 University of Chichester {@link https://www.chi.ac.uk}
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -34,7 +36,7 @@ use Behat\Gherkin\Node\TableNode as TableNode,
  * @package block_coursesearch
  * @category test
  * @author Mark Sharp <m.sharp@chi.ac.uk>
- * @copyright 2018 University of Chichester {@link www.chi.ac.uk}
+ * @copyright 2018 University of Chichester {@link https://www.chi.ac.uk}
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class behat_coursesearch extends behat_base {

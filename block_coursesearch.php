@@ -19,7 +19,7 @@
  *
  * @package   block_coursesearch
  * @author    Mark Sharp <m.sharp@chi.ac.uk>
- * @copyright 2017 University of Chichester {@link www.chi.ac.uk}
+ * @copyright 2017 University of Chichester {@link https://www.chi.ac.uk}
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -28,7 +28,7 @@ defined('MOODLE_INTERNAL') || die();
 /**
  * Main coursesearch class.
  *
- * @copyright 2017 University of Chichester {@link www.chi.ac.uk}
+ * @copyright 2017 University of Chichester {@link https://www.chi.ac.uk}
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class block_coursesearch extends block_base {
@@ -71,8 +71,6 @@ class block_coursesearch extends block_base {
      * {@inheritdoc}
      */
     public function get_content() {
-        global $PAGE;
-
         if ($this->content !== null) {
             return $this->content;
         }
@@ -81,7 +79,7 @@ class block_coursesearch extends block_base {
         $this->content = new stdClass();
         $this->content->text = '';
 
-        $courserenderer = $PAGE->get_renderer('core', 'course');
+        $courserenderer = $this->page->get_renderer('core', 'course');
         $this->content->text = $courserenderer->course_search_form('', 'short');
         return $this->content;
     }
