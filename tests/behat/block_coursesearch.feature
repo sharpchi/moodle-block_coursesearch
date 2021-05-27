@@ -26,19 +26,21 @@ Feature: Block course search
         And I click on "Customise this page" "button"
         And I add the "Basic course search" block
         When I set the field "Search courses" to "Biology"
-        And I press "Go"
+        And I click on "Go" "button" in the "Basic course search" "block"
         Then I should see "Biology Y1"
         And I should see "Biology Y2"
         And I should not see "English Y1"
         And I should not see "English Y2"
 
+    @javascript
     Scenario: Add coursesearch block on the site homepage
         When I log in as "admin"
         And I am on site homepage
-        And I follow "Turn editing on"
+        And I navigate to "Turn editing on" in current page administration
         And I add the "Basic course search" block
+        And I am on site homepage
         When I set the field "Search courses" to "Biology"
-        And I click on "//aside[@data-block='coursesearch']//button['Go']" "xpath_element"
+        And I click on "Go" "button" in the "Basic course search" "block"
         Then I should see "Biology Y1"
         And I should see "Biology Y2"
         And I should not see "English Y1"
