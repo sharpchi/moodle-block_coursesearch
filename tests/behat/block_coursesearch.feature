@@ -23,7 +23,7 @@ Feature: Block course search
     Scenario: Add coursesearch block on the dashboard
         When I log in as "student1"
         And I am on dashboard
-        And I click on "Customise this page" "button"
+        And I turn editing mode on
         And I add the "Basic course search" block
         When I set the field "Search courses" to "Biology"
         And I click on "Search" "button" in the "Basic course search" "block"
@@ -36,7 +36,7 @@ Feature: Block course search
     Scenario: Add coursesearch block on the site homepage
         When I log in as "admin"
         And I am on site homepage
-        And I navigate to "Turn editing on" in current page administration
+        And I turn editing mode on
         And I add the "Basic course search" block
         And I am on site homepage
         When I set the field "Search courses" to "Biology"
