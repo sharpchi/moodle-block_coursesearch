@@ -24,8 +24,6 @@
 
 namespace block_coursesearch\privacy;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Privacy Subsystem for block_coursesearch implementing null_provider.
  *
