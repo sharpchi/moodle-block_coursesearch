@@ -25,8 +25,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2022120800;
-$plugin->requires = 2022041900; // Version 4.00.
-$plugin->release = 2.1;
+$plugin->version = 2022120801;
+$plugin->requires = 2022112800; // Version 401.
+$plugin->release = "4.1-r1";
 $plugin->maturity = MATURITY_STABLE;
 $plugin->component = 'block_coursesearch';
