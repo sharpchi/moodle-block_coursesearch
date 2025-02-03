@@ -25,8 +25,10 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname'] = 'Basic course search';
-$string['coursesearch:myaddinstance'] = 'Add a basic course search block to Dashboard';
-$string['coursesearch:addinstance'] = 'Add a basic course search block';
 $string['blocktitle'] = 'Block title';
+
+$string['coursesearch:addinstance'] = 'Add a basic course search block';
+$string['coursesearch:myaddinstance'] = 'Add a basic course search block to Dashboard';
+
+$string['pluginname'] = 'Basic course search';
 $string['privacy:metadata'] = 'The Course Search block only shows data stored in other locations.';

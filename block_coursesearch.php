@@ -86,6 +86,6 @@ class block_coursesearch extends block_base {
      * {@inheritdoc}
      */
     public function applicable_formats() {
-        return array('my' => true, 'site' => true);
+        return ['my' => true, 'site' => true];
     }
 }
